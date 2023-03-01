@@ -23,10 +23,10 @@ public class MemberServiceIntegrationTest {
     @Autowired MemberRepository memberRepository;
 
     @Test
-    void 회원가입() throws Exception{
+    void 회원가입() throws Exception {
         //given
         Member member = new Member();
-        member.setName("spring100");
+        member.setName("hello");
         //when
         Long saveId = memberService.join(member);
 
@@ -36,7 +36,7 @@ public class MemberServiceIntegrationTest {
     }
 
     @Test
-    public void 중복_회원_예외(){
+    public void 중복_회원_예외() throws Exception{
         //given
         Member member1 = new Member();
         member1.setName("spring");
